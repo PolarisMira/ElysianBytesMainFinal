@@ -1,0 +1,21 @@
+<%- include('header') %>
+
+        <section id="register-page" class="flex-center">
+
+            <h2>“Your sweet cravings, one click away”</h2>
+
+            <div class="log-in-container flex-center">
+                <h2>Sign Up</h2>
+                <form action="/register" id="form1" method="post"></form>
+                <label for="username">Email</label>
+                <input type="text" form="form1" name="username"class="input-txt">
+                <label for="password">Password</label>
+                <input type="password" form="form1" name="password" class="input-txt">
+                <input type="submit" form="form1" class="input-btn">
+            </div>
+
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
