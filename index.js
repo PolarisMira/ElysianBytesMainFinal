@@ -9,8 +9,8 @@ import bcrypt from "bcrypt";
 env.config();
 
 const app = express();
-const port = process.env.PORT;
-const saltRounds = Number(process.env.SALT_ROUND);
+const port = 3000;
+const saltRounds = Number(10);
 
 let items = []
 let trending = []
@@ -23,16 +23,16 @@ let birthday_cakes = []
 let orderCount = 0;
 
 const db = new pg.Client({
-    user: process.env.PG_USER,
-    host : process.env.PG_HOST, 
-    database : process.env.PG_DATABASE,
-    password : process.env.PG_PASSWORD,
-    port: process.env.PG_PORT
+    user: 'postgres',
+    host : 'localhost',
+    database : 'elysianbytes',
+    password : 'n0rthgang!',
+    port: 5432
 });
 
 app.use(
     session({
-        secret: process.env.SESSION_SECRET,
+        secret: 'gn%!@Fasfj1o4!@$asd1%^!@Sd',
         resave: false,
         saveUninitialized: true,
         cookie: {
